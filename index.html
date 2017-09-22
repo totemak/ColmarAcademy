@@ -14,9 +14,12 @@
     <header>
       <div class="company">
         <img class="logo" src="./resources/images/ic-logo.svg" />
-        <div><span class="bold">COLMAR</span><span class="thin">ACADEMY</span></div>
+        <div id="desktop"><span class="bold">COLMAR</span><span class="thin">ACADEMY</span></div>
+        <a id="mobile" href="#"><img src="./resources/images/ic-on-campus.svg" /></a>
+        <a id="mobile" href="#"><img src="./resources/images/ic-online.svg" /></a>
+        <a id="mobile" href="#"><img src="./resources/images/ic-login.svg" /></a>
       </div>
-      <nav>
+      <nav id="desktop">
         <span><a href="#">On campus</a></span>
         <span><a href="#">Online</a></span>
         <span><a href="#">For companies</a></span>
@@ -41,7 +44,7 @@
 
       <!-- first block !-->
       <div class="first-block light">
-        <div class="left">
+        <div class="left" id="desktop">
           <div class="big-image">
             <img src="./resources/images/information-main.jpg" />
           </div>
@@ -79,7 +82,7 @@
             </div>
           </div>
 
-          <div class="information dark">
+          <div class="information dark" id="desktop">
             <div class="small-image">
               <img src="./resources/images/information-guest-lecture.jpg" />
             </div>
@@ -89,12 +92,23 @@
               <a href="#"><span class="cta">Read more</span></a>
             </div>
           </div>
+
+          <div class="information light" id="mobile">
+            <div class="small-image">
+              <img src="./resources/images/information-guest-lecture.jpg" />
+            </div>
+            <div class="text">
+              <h2>Special guest lecture</h2>
+              <p>Join a keynote with Oliver Sack about music in medical treatment</p>
+              <a href="#"><span class="cta">Read more</span></a>
+            </div>
+          </div>
         </div>
       </div>
       <!-- end of first block !-->
 
-      <!-- second block !-->
-      <div class="second-block medium">
+      <!-- second block desktop version!-->
+      <div class="second-block medium" id="desktop">
         <h1>Start learning</h1>
 
         <div class="learning">
@@ -168,10 +182,40 @@
 
         </div>
       </div>
-      <!-- end of second block !-->
+      <!-- end of second block desktop version !-->
 
-      <!-- third block !-->
-      <div class="third-block light">
+      <!-- second block mobile version !-->
+      <div class="second-block light" id="mobile">
+        <h1>Start learning</h1>
+
+        <div class="widget">
+          <span>Software engineering</span>
+        </div>
+
+        <div class="widget">
+          <span>Computer art</span>
+        </div>
+
+        <div class="widget">
+          <span>Design</span>
+        </div>
+
+        <div class="widget">
+          <span>Data</span>
+        </div>
+
+        <div class="widget">
+          <span>Business</span>
+        </div>
+
+        <div class="widget">
+          <span>Marketing</span>
+        </div>
+      </div>
+      <!-- end of second block mobile version!-->
+
+      <!-- third block desktop version!-->
+      <div class="third-block light" id="desktop">
         <h1>Thesis exhibit</h1>
 
         <div class="thesis">
@@ -214,14 +258,25 @@
           </div>
         </div>
       </div>
-      <!-- end of third block !-->
+      <!-- end of third block desktop version !-->
+
+      <!-- third block mobile version!-->
+      <div class="third-block light" id="mobile">
+        <h1>Thesis exhibit</h1>
+        <video controls>
+          <source src="./resources/videos/thesis.mp4">
+          Sorry, your browser does not support embedded videos, but feel free to <a href="./resources/videos/thesis.mp4">DOWNLOAD</a> and watch offline.
+        </video>
+      </div>
+      <!-- end of third block mobile version!-->
+
     </main>
 
     <!-- footer part !-->
     <footer class="light">
       <span class="copyright">&copy; 2016 Colmar Academy. All rights reserved</span>
 
-      <div class="list">
+      <div class="list" id="desktop">
         <span><a href="#">Terms</a></span>
         <span><a href="#">Privacy</a></span>
       </div>
