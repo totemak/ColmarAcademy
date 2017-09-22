@@ -3,8 +3,7 @@
 html {
   font-size: 16px;
   font-family: Helvetica;
-  color: transparent;
-  text-shadow: 0 0 0.5px darkslategrey;
+  color: darkslategrey;
 }
 
 main, footer {
@@ -41,10 +40,6 @@ h2 {
   background-color: #f1f1f1;
 }
 
-div {
-  border: 1px solid black;
-}
-
 img {
   width: 100%;
   height: auto;
@@ -60,21 +55,69 @@ header,
 .information,
 .text,
 .second-block,
-.learning {
+.learning,
+.third-block,
+.thesis,
+.topic,
+footer {
   display: flex;
 }
 
-header, .company {
+header, .company, footer {
   justify-content: space-between;
   align-items: center;
 }
 
 .message,
 .text,
-.second-block {
+.second-block,
+.third-block {
   flex-flow: column;
   justify-content: center;
 }
+
+
+/* styles for mutliple areas */
+
+.banner .big-image,
+.first-block .left {
+  padding: 2rem 1.5rem;
+  width: 60%;
+  height: auto;
+}
+
+.message h1,
+.message h2,
+.quote p {
+  margin-bottom: 2rem;
+}
+
+.message h1,
+.message h2,
+.message a {
+  margin-left: 3rem;
+  margin-right: 5rem;
+}
+
+.first-block .right,
+.third-block .right {
+  width: 40%;
+}
+
+.information h2,
+.information p,
+.topic h2,
+.topic p {
+  margin-bottom: 0.5rem;
+  padding-right: 2rem;
+}
+
+.second-block h1,
+.third-block h1 {
+  padding-bottom: 2rem;
+  margin: auto;
+}
+
 
 /* header styles */
 
@@ -123,42 +166,20 @@ nav a {
 
 /* banner and first block big image styles */
 
-.banner .big-image,
-.first-block .left {
-  padding: 2rem 1.5rem;
-  width: 60%;
-  height: auto;
-}
-
 .message {
   width: 40%;
 }
 
-.message h1,
-.message h2,
-.quote p {
-  margin-bottom: 2rem;
-}
-
-.message h1,
-.message h2,
 .message a {
-  padding-left: 3rem;
-  padding-right: 5rem;
-}
-
-button {
+  font-size: 1.375rem;
+  text-decoration: none;
+  text-align: center;
+  color: white;
   background-color: darkslategrey;
-  border: none;
-  width: 100%;
   padding: 0.5rem;
 }
 
-button span {
-  font-size: 1.375rem;
-  color: transparent;
-  text-shadow: 0 0 0.5px white;
-}
+
 
 /* first block styles */
 
@@ -170,11 +191,7 @@ button span {
   margin-bottom: 1.5rem;
 }
 
-.first-block .right {
-  width: 40%;
-}
-
-.information .small-image {
+.small-image {
   padding: 1rem;
   width: 35%;
 }
@@ -183,21 +200,19 @@ button span {
   width: 65%;
 }
 
-.information h2,
-.information p {
-  margin-bottom: 0.5rem;
-  padding-right: 2rem;
+.first-block .right {
+  margin-top: 1rem;
+}
+
+.information .text a {
+  text-decoration: none;
+  color: dodgerblue;
 }
 
 /* second block styles */
 
 .second-block {
   padding: 2rem 4.5rem 0 4.5rem;
-}
-
-.second-block h1 {
-  padding-bottom: 2rem;
-  margin: auto;
 }
 
 .learning {
@@ -226,4 +241,49 @@ button span {
 
 .description h2 {
   margin-bottom: 1rem;
+}
+
+/* third block styles */
+
+.third-block {
+  padding-top: 2rem;
+}
+
+.third-block .left {
+  padding: 0 1.5rem 2rem 1.5rem;
+  width: 60%;
+  height: auto;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+.video-text {
+  margin-top: 1.5rem;
+}
+
+.video-text h2 {
+  padding-bottom: 0.5rem;
+}
+
+/* footer styles */
+
+footer {
+  padding: 1rem 1.5rem 4rem 1.5rem;
+  border-top: 1px solid #d1d1d1;
+}
+
+footer span {
+  font-size: 1rem;
+}
+
+.list a {
+  text-decoration: none;
+  color: darkslategrey;
+}
+
+.list span {
+  padding-left: 1.5rem;
 }
