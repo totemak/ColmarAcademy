@@ -3,7 +3,8 @@
 html {
   font-size: 16px;
   font-family: Helvetica;
-  color: darkslategrey;
+  color: transparent;
+  text-shadow: 0 0 0.5px darkslategrey;
 }
 
 main, footer {
@@ -11,25 +12,82 @@ main, footer {
   top: 4rem;
 }
 
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+span,
+p,
+h2 {
+  line-height: 1.5;
+}
+
+.dark {
+  background-color: #d1d1d1;
+}
+
+.medium {
+  background-color: #e1e1e1;
+}
+
+.light {
+  background-color: #f1f1f1;
+}
+
+div {
+  border: 1px solid black;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
 /* flex boxes */
 
-header, .company {
+header,
+.company,
+.banner,
+.message,
+.first-block,
+.information,
+.text,
+.second-block,
+.learning {
   display: flex;
+}
+
+header, .company {
   justify-content: space-between;
   align-items: center;
+}
+
+.message,
+.text,
+.second-block {
+  flex-flow: column;
+  justify-content: center;
 }
 
 /* header styles */
 
 header {
   position: fixed;
+  top: 0;
   height: 4rem;
   z-index: 5;
   background-color: white;
   width: 100%;
 }
 
-.company .logo {
+.logo {
   height: 2rem;
   margin-left: 1.5rem;
   margin-right: 0.5rem;
@@ -40,11 +98,11 @@ header {
   font-size: 1.5rem;
 }
 
-.company .bold {
+.bold {
   font-weight: bold;
 }
 
-.company .thin {
+.thin {
   opacity: 0.7;
 }
 
@@ -60,4 +118,112 @@ nav a {
   text-decoration: none;
   color: darkslategrey;
   font-size: 1.375rem;
+}
+
+
+/* banner and first block big image styles */
+
+.banner .big-image,
+.first-block .left {
+  padding: 2rem 1.5rem;
+  width: 60%;
+  height: auto;
+}
+
+.message {
+  width: 40%;
+}
+
+.message h1,
+.message h2,
+.quote p {
+  margin-bottom: 2rem;
+}
+
+.message h1,
+.message h2,
+.message a {
+  padding-left: 3rem;
+  padding-right: 5rem;
+}
+
+button {
+  background-color: darkslategrey;
+  border: none;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+button span {
+  font-size: 1.375rem;
+  color: transparent;
+  text-shadow: 0 0 0.5px white;
+}
+
+/* first block styles */
+
+.quote {
+  padding: 2rem 0;
+}
+
+.quote h1 {
+  margin-bottom: 1.5rem;
+}
+
+.first-block .right {
+  width: 40%;
+}
+
+.information .small-image {
+  padding: 1rem;
+  width: 35%;
+}
+
+.text {
+  width: 65%;
+}
+
+.information h2,
+.information p {
+  margin-bottom: 0.5rem;
+  padding-right: 2rem;
+}
+
+/* second block styles */
+
+.second-block {
+  padding: 2rem 4.5rem 0 4.5rem;
+}
+
+.second-block h1 {
+  padding-bottom: 2rem;
+  margin: auto;
+}
+
+.learning {
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.box {
+  width: 33%;
+  background-color: white;
+}
+
+.middle {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.description {
+  padding: 1.5rem 1rem;
+}
+
+.courses {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.description h2 {
+  margin-bottom: 1rem;
 }
