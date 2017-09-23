@@ -240,10 +240,27 @@ nav a {
 }
 
 @media only screen and (max-width: 730px) {
-  .company {
-    width: 100%;
+  header {
     height: 4rem;
-    padding-right: 2rem;
+  }
+  nav {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            -ms-grid-row-align: center;
+                align-items: center;
+  }
+  .logo {
+    margin: 0;
+  }
+  nav a {
+    margin: 0 2rem;
   }
 }
 
