@@ -33,7 +33,6 @@
 }
 
 
-
 /* generic styles */
 
 html {
@@ -276,6 +275,7 @@ nav a {
   font-size: 18px;
   font-size: 1.125rem;
   font-family: "Helvetica", sans-serif;
+  -webkit-transition: text-shadow 200ms linear;
   transition: text-shadow 200ms linear;
 }
 
@@ -325,6 +325,7 @@ nav a:hover {
 
 .message a:active {
   background-color: red;
+  font-size: 20px;
   font-size: 1.25rem;
 }
 
@@ -470,6 +471,7 @@ nav a:hover {
     background-color: #e1e1e1;
     padding: 1rem 1rem 1.5rem 1rem;
     margin-top: 0.5rem;
+    -webkit-transition: background-color 300ms linear;
     transition: background-color 300ms linear;
   }
 
