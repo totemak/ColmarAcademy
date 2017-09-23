@@ -1,8 +1,44 @@
+/* fonts libraries */
+
+@font-face {
+  font-family: 'Alegreya Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Alegreya Sans Regular'), local('AlegreyaSans-Regular'), url(https://fonts.gstatic.com/s/alegreyasans/v5/KYNzioYhDai7mTMnx_gDgsmBRJoLbs7X6hY7yFEc97Q.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Alegreya Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Alegreya Sans Bold'), local('AlegreyaSans-Bold'), url(https://fonts.gstatic.com/s/alegreyasans/v5/11EDm-lum6tskJMBbdy9acrysgx4XYXiGyd0rEkyLBs.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v10/zhcz-_WihjSQC0oHJ9TCYPk_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Montserrat Bold'), local('Montserrat-Bold'), url(https://fonts.gstatic.com/s/montserrat/v10/IQHow_FEYlDC4Gzy_m8fcoWiMMZ7xLd792ULpGE4W_Y.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+
+
 /* generic styles */
 
 html {
   font-size: 16px;
-  font-family: Helvetica;
+  font-family: "Montserrat", "Segoe UI", sans-serif;
   color: darkslategrey;
 }
 
@@ -13,8 +49,8 @@ main, footer {
 }
 
 h1 {
-  font-size: 48px;
-  font-size: 3rem;
+  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: bold;
   line-height: 1.25;
 }
@@ -211,7 +247,9 @@ header {
 .company div {
   font-size: 24px;
   font-size: 1.5rem;
+  font-family: "Alegreya Sans", "Century Gothic", sans-serif;
 }
+
 
 .bold {
   font-weight: bold;
@@ -223,20 +261,26 @@ header {
 }
 
 nav {
-  margin-right: 8px;
-  margin-right: 0.5rem;
+  margin-right: 24px;
+  margin-right: 1.5rem;
 }
 
 nav span {
-  margin: 16px;
-  margin: 1rem;
+  margin-left: 16px;
+  margin-left: 1rem;
 }
 
 nav a {
   text-decoration: none;
   color: darkslategrey;
-  font-size: 22px;
-  font-size: 1.375rem;
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-family: "Helvetica", sans-serif;
+  transition: text-shadow 200ms linear;
+}
+
+nav a:hover {
+  text-shadow: 0 0 5px cornflowerblue;
 }
 
 @media only screen and (max-width: 730px) {
@@ -256,12 +300,6 @@ nav a {
             -ms-grid-row-align: center;
                 align-items: center;
   }
-  .logo {
-    margin: 0;
-  }
-  nav a {
-    margin: 0 2rem;
-  }
 }
 
 /* banner styles */
@@ -279,6 +317,15 @@ nav a {
   background-color: darkslategrey;
   padding: 8px;
   padding: 0.5rem;
+}
+
+.message a:hover {
+  background-color: orange;
+}
+
+.message a:active {
+  background-color: red;
+  font-size: 1.25rem;
 }
 
 @media only screen and (max-width: 730px) {
@@ -321,6 +368,10 @@ nav a {
   width: 65%;
 }
 
+.signature {
+  font-family: "Helvetica", sans-serif;
+}
+
 .first-block .right {
   margin-top: 16px;
   margin-top: 1rem;
@@ -328,7 +379,11 @@ nav a {
 
 .information .text a {
   text-decoration: none;
-  color: dodgerblue;
+  color: cornflowerblue;
+}
+
+.information .text a:hover {
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 730px) {
@@ -395,6 +450,7 @@ nav a {
   margin-bottom: 1rem;
 }
 
+
 @media only screen and (max-width: 730px) {
   .second-block {
     padding: 2rem 1rem;
@@ -414,6 +470,11 @@ nav a {
     background-color: #e1e1e1;
     padding: 1rem 1rem 1.5rem 1rem;
     margin-top: 0.5rem;
+    transition: background-color 300ms linear;
+  }
+
+  .widget:hover {
+    background-color: #d1d1d1;
   }
 }
 
