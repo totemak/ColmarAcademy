@@ -8,16 +8,19 @@ html {
 
 main, footer {
   position: relative;
+  top: 64px;
   top: 4rem;
 }
 
 h1 {
+  font-size: 48px;
   font-size: 3rem;
   font-weight: bold;
   line-height: 1.25;
 }
 
 h2 {
+  font-size: 24px;
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -49,13 +52,13 @@ img {
   display: none;
 }
 
-@media only screen and (max-width: 1020px) {
+@media only screen and (min-width: 860px) and (max-width: 1020px) {
   html {
     font-size: 14px;
   }
 }
 
-@media only screen and (max-width: 860px) {
+@media only screen and (min-width:730px) and (max-width: 860px) {
   html {
     font-size: 12px;
   }
@@ -98,20 +101,30 @@ header,
 .thesis,
 .topic,
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 header, .company, footer {
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+              -ms-grid-row-align: center;
+          align-items: center;
 }
 
 .message,
 .text,
 .second-block,
 .third-block {
-  flex-flow: column;
-  justify-content: center;
+  -ms-flex-flow: column;
+      flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 
@@ -119,6 +132,7 @@ header, .company, footer {
 
 .banner .big-image,
 .first-block .left {
+  padding: 32px 24px;
   padding: 2rem 1.5rem;
   width: 60%;
   height: auto;
@@ -127,13 +141,16 @@ header, .company, footer {
 .message h1,
 .message h2,
 .quote p {
+  margin-bottom: 32px;
   margin-bottom: 2rem;
 }
 
 .message h1,
 .message h2,
 .message a {
+  margin-left: 48px;
   margin-left: 3rem;
+  margin-right: 80px;
   margin-right: 5rem;
 }
 
@@ -146,12 +163,15 @@ header, .company, footer {
 .information p,
 .topic h2,
 .topic p {
+  margin-bottom: 8px;
   margin-bottom: 0.5rem;
+  padding-right: 32px;
   padding-right: 2rem;
 }
 
 .second-block h1,
 .third-block h1 {
+  padding-bottom: 32px;
   padding-bottom: 2rem;
   margin: auto;
 }
@@ -171,6 +191,7 @@ header, .company, footer {
 header {
   position: fixed;
   top: 0;
+  height: 64px;
   height: 4rem;
   z-index: 5;
   background-color: white;
@@ -178,13 +199,17 @@ header {
 }
 
 .logo {
+  height: 32px;
   height: 2rem;
+  margin-left: 24px;
   margin-left: 1.5rem;
+  margin-right: 8px;
   margin-right: 0.5rem;
   width: auto;
 }
 
 .company div {
+  font-size: 24px;
   font-size: 1.5rem;
 }
 
@@ -194,19 +219,23 @@ header {
 
 .thin {
   opacity: 0.7;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
 }
 
 nav {
+  margin-right: 8px;
   margin-right: 0.5rem;
 }
 
 nav span {
+  margin: 16px;
   margin: 1rem;
 }
 
 nav a {
   text-decoration: none;
   color: darkslategrey;
+  font-size: 22px;
   font-size: 1.375rem;
 }
 
@@ -225,17 +254,20 @@ nav a {
 }
 
 .message a {
+  font-size: 22px;
   font-size: 1.375rem;
   text-decoration: none;
   text-align: center;
   color: white;
   background-color: darkslategrey;
+  padding: 8px;
   padding: 0.5rem;
 }
 
 @media only screen and (max-width: 730px) {
   .banner {
-    flex-flow: column;
+    -ms-flex-flow: column;
+        flex-flow: column;
   }
 
   .banner .big-image {
@@ -253,14 +285,17 @@ nav a {
 /* first block styles */
 
 .quote {
+  padding: 32px 0;
   padding: 2rem 0;
 }
 
 .quote h1 {
+  margin-bottom: 24px;
   margin-bottom: 1.5rem;
 }
 
 .small-image {
+  padding: 16px;
   padding: 1rem;
   width: 35%;
 }
@@ -270,6 +305,7 @@ nav a {
 }
 
 .first-block .right {
+  margin-top: 16px;
   margin-top: 1rem;
 }
 
@@ -285,7 +321,8 @@ nav a {
   }
 
   .information {
-    flex-flow: column;
+    -ms-flex-flow: column;
+        flex-flow: column;
   }
 
   .information .small-image {
@@ -301,11 +338,15 @@ nav a {
 /* second block styles */
 
 .second-block {
+  padding: 32px 72px 0 72px;
   padding: 2rem 4.5rem 0 4.5rem;
 }
 
 .learning {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 32px;
   margin-bottom: 2rem;
 }
 
@@ -315,20 +356,25 @@ nav a {
 }
 
 .middle {
+  margin-left: 32px;
   margin-left: 2rem;
+  margin-right: 32px;
   margin-right: 2rem;
 }
 
 .description {
+  padding: 24px 16px;
   padding: 1.5rem 1rem;
 }
 
 .courses {
   display: block;
+  margin-bottom: 8px;
   margin-bottom: 0.5rem;
 }
 
 .description h2 {
+  margin-bottom: 16px;
   margin-bottom: 1rem;
 }
 
@@ -358,10 +404,12 @@ nav a {
 /* third block styles */
 
 .third-block {
+  padding-top: 32px;
   padding-top: 2rem;
 }
 
 .third-block .left {
+  padding: 0 24px 32px 24px;
   padding: 0 1.5rem 2rem 1.5rem;
   width: 60%;
   height: auto;
@@ -373,10 +421,12 @@ video {
 }
 
 .video-text {
+  margin-top: 24px;
   margin-top: 1.5rem;
 }
 
 .video-text h2 {
+  padding-bottom: 8px;
   padding-bottom: 0.5rem;
 }
 
@@ -394,11 +444,13 @@ video {
 /* footer styles */
 
 footer {
+  padding: 16px 24px 64px 24px;
   padding: 1rem 1.5rem 4rem 1.5rem;
   border-top: 1px solid #d1d1d1;
 }
 
 footer span {
+  font-size: 12px;
   font-size: 0.75rem;
 }
 
@@ -408,6 +460,7 @@ footer span {
 }
 
 .list span {
+  padding-left: 24px;
   padding-left: 1.5rem;
 }
 
